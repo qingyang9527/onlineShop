@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF0036</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorWhiteBg">#ffffff</color>
+    <color name="colorGrayBg">#f4f4f4</color>
+    <color name="blue">#3F51B5</color>
+    <color name="blue_dark">#303F9F</color>
+
+    <color name="red">#FF4081</color>
+
+    <color name="transparent">#0000</color>
+
+    <color name="black">#000</color>
+
+    <color name="gray">#999</color>
+    <!--分割线的颜色-->
+    <color name="colorLine">#e8e8e8</color>
+    <!--背景颜色-->
+    <color name="colorBackground">#eeeeee</color>
+    <!--底部(选中)图标颜色-->
+    <color name="colorSelectedIcon">#ff5000</color>
+    <!--字体颜色-->
+    <color name="colorFont">#5f646e</color>
+    <!--透明的颜色-->
+    <color name="colorTransparency">#0000</color>
+    <!--底部(未选中)图标颜色-->
+    <color name="colorUnSelectedIcon">#5f646e</color>
+    <!-- 浅黑黑色 -->
+    <color name="qianhui">#E0E0E0</color>
+</resources>

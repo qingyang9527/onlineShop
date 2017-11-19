@@ -1,0 +1,66 @@
+package com.hm.onlineshop.adapter.vLayout;
+
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.alibaba.android.vlayout.DelegateAdapter;
+import com.alibaba.android.vlayout.LayoutHelper;
+import com.hm.onlineshop.R;
+
+/**
+ * Created by H&M on 2017/11/3 17:39:14
+ */
+
+public class DelegateRecyclerAdapter extends DelegateAdapter.Adapter {
+
+    public Context context;
+    private LayoutHelper helper;
+    private LayoutInflater inflater;
+    private String name;
+
+    public DelegateRecyclerAdapter(Context context,LayoutHelper helper,String name){
+        this.inflater=LayoutInflater.from(context);
+        this.context=context;
+        this.helper=helper;
+        this.name=name;
+    }
+
+
+    @Override
+    public LayoutHelper onCreateLayoutHelper() {
+        return this.helper;
+    }
+
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new MyViewHolder(inflater.inflate(R.layout.activity_test,parent,false));
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        if(position%2==0){
+            holder.itemView.setBackgroundColor(0xaa3F51B5);
+        }else{
+            holder.itemView.setBackgroundColor(0xccFF4081);
+        }
+        MyViewHolder myViewHolder=(MyViewHolder)holder;
+        myViewHolder.name.setText(name+position+"");
+    }
+
+    @Override
+    public int getItemCount() {
+        return 25;
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder{
+        public TextView name;
+        public MyViewHolder(View itemView) {
+            super(itemView);
+            name=(TextView)itemView.findViewById(R.id.name);
+        }
+    }
+}
